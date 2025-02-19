@@ -1,109 +1,65 @@
-# TDD: Testing Your Modularised Calculator
+# Jest Calculator
 
-## Challenge
+This is a simple calculator project that demonstrates the use of basic arithmetic operations and unit testing with Jest. The project includes functions for addition, subtraction, multiplication, and division, along with corresponding test cases.
 
-In this challenge, you will apply **Test Driven Development (TDD)** to the modularised calculator you built in the previous session. The goal is to write a set of automated tests for each calculator function (add, subtract, multiply, divide).
+## Table of Contents
 
-The tests should work reliably and cover all edge cases to ensure your calculator module functions correctly across different scenarios. Once all tests pass, you will create a demonstration video to show the application and testing procedure.
+- [Installation](#installation)
+- [Usage](#usage)
+- [Testing](#testing)
+- [Contributing](#contributing)
+- [License](#license)
 
-## Submission Requirements:
+## Installation
 
-- **GitHub Repository**: Submit a link to your GitHub repo containing your calculator module and tests.
-- **Video Walkthrough**: Record a video demonstrating:
-
-  1. The application working.
-  2. The testing process (running tests and showing that they pass).
-
-  You can use screen recording tools such as **Screencastify** or **QuickTime**. Audio is optional, and the video should focus on showing the working tests.
-
-### Tools:
-
-- **Jest** or any other testing framework of your choice.
-- **Screencastify**, **QuickTime**, or any other screen recording software for the video submission.
-
-## Key Learnings
-
-- Understand how to apply **Test Driven Development (TDD)** principles in an existing project.
-- Learn how to write and implement tests to ensure code reliability and correctness.
-- Gain experience using **screen recording tools** to demonstrate project functionality.
-
-## User Story
-
-As a developer, I want to ensure my modularised calculator functions correctly through automated tests, so that I can confidently use it in other projects. I also want to document and present the working application with test coverage using a video walkthrough.
-
-## Acceptance Criteria
-
-- You have written automated tests for all calculator functions (add, subtract, multiply, divide).
-- Your tests cover normal operations and edge cases (e.g., division by zero, negative numbers).
-- All tests pass successfully.
-- You have submitted a GitHub repo containing:
-  - The calculator module.
-  - The test files.
-- You have submitted a **video walkthrough** demonstrating:
-  - The calculator functionality.
-  - The testing process, with all tests passing.
-
----
-
-## Steps to Complete
-
-### Step 1: Set Up Your Test Environment
-
-1. Install a testing framework such as **Jest**:
-   ```bash
-   npm install --save-dev jest
-   ```
-2. Configure your test script in package.json
-
-   ```bash
-   "scripts": {
-   "test": "jest"
-
-   ```
-
-### Step 2: Write Tests for Each Calculator Function
-
-1. Write unit tests for each function:
-
-- Addition: Test basic addition, negative numbers, and zero.
-- Subtraction: Test simple subtraction, edge cases like subtracting from zero.
-- Multiplication: Test multiplication with positive and negative numbers, multiplication by zero.
-- Division: Test division by zero, negative numbers, and division of integers and floats.
-
-Example test for the add function using Jest:
+To get started, you need to clone the repository and install the necessary dependencies.
 
 ```bash
-const { add } = require('./calculator');
+# Clone the repository
+git clone https://github.com/meghanasrividya/jest-calculator.git
 
-test('adds 2 + 3 to equal 5', () => {
-  expect(add(2, 3)).toBe(5);
-});
+# Navigate to the project directory
+cd jest-calculator
+
+# Install dependencies
+npm install
 ```
 
-### Step 3: Run Your Tests
+## Usage
 
-1. Run the tests to ensure they pass:
+You can use the calculator functions by requiring the `calculator.js` module in your project. Below is an example of how to use the functions:
+
+```javascript
+const { add, subtract, multiply, divide } = require('./calculator');
+
+console.log('Addition of 2 and 3:', add(2, 3));          // 5
+console.log('Subtraction of 5 from 10:', subtract(10, 5)); // 5
+console.log('Multiplication of 2 and 5:', multiply(2, 5)); // 10
+console.log('Division of 6 by 2:', divide(6, 2));          // 3
+```
+
+## Testing
+
+This project uses Jest for unit testing. To run the tests, use the following command:
 
 ```bash
-npm run test
+npm test
 ```
 
-2. Ensure the tests cover different edge cases.
+The test cases for the calculator functions are defined in the `calculator.test.js` file. The tests cover various scenarios, including edge cases like division by zero.
 
-### Step 4: Record Your Video Walkthrough
+## Contributing
 
-1. Use Screencastify, QuickTime, or any other screen recording tool.
-2. Record the following:
+Contributions are welcome! If you have any ideas or improvements, feel free to open an issue or submit a pull request.
 
-- Running the calculator functions.
-- Running the automated tests and showing all tests passing.
+1. Fork the repository
+2. Create a new branch (`git checkout -b feature-branch`)
+3. Make your changes
+4. Commit your changes (`git commit -m 'Add some feature'`)
+5. Push to the branch (`git push origin feature-branch`)
+6. Open a pull request
 
-3. Save the video and upload it to your preferred platform (Google Drive, YouTube, etc.).
+## License
 
-## Useful Resources
-
-- [Jest Documentation](https://jestjs.io/docs/getting-started) - Official Jest documentation for getting started with testing.
-- [TDD Guide](https://www.freecodecamp.org/news/an-introduction-to-test-driven-development-c3a321bd2f2c/) - An introduction to Test Driven Development.
-- [Screencastify](https://www.screencastify.com/) - A simple tool for recording and sharing your screen.
-- [QuickTime Guide](https://support.apple.com/guide/quicktime-player/record-your-screen-qtp97b08e666/mac) - Guide to using QuickTime for screen recording.
-# jest-calculator
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+```` ▋
